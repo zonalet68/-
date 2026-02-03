@@ -9,7 +9,7 @@
 
 **方式一：Git 克隆**
 ```bash
-git clone https://github.com/你的用户名/项目名称.git
+git clone https://github.com/zonalet68/1.git
 cd 广州理工学院教务系统自动化登录
 ```
 
@@ -153,3 +153,4 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## 免责声明
 本脚本仅供学习交流使用，请遵守学校相关规定。因使用本脚本造成的任何问题，作者不承担责任。
+
