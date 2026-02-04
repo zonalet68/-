@@ -3,6 +3,8 @@
 ## 项目简介
 基于Selenium的教务系统自动登录脚本，支持广州理工学院教务系统自动化登录，包含验证码自动识别功能。
 
+**⚠️ 系统要求：Windows + Microsoft Edge 浏览器**
+
 ## 快速开始
 
 ### 1. 下载项目
@@ -39,8 +41,22 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 **系统要求：**
 - Python 3.7+
 - Microsoft Edge 浏览器
+- Windows 操作系统
 
-### 3. 配置账号
+### 3. 获取浏览器驱动
+
+**⚠️ 首次运行前需要下载 msedgedriver.exe**
+
+**方式一：使用附带的驱动（推荐）**
+- 如果项目目录中已有 `msedgedriver.exe`，直接使用即可
+
+**方式二：手动下载驱动**
+1. 打开 Edge 浏览器，访问 `edge://version/` 查看版本号
+2. 访问 [Edge WebDriver 下载页面](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+3. 下载与你的 Edge 版本匹配的驱动
+4. 将下载的 `msedgedriver.exe` 放入项目根目录
+
+### 4. 配置账号
 
 **方式一：手动输入（首次推荐）**
 
@@ -67,10 +83,9 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 **⚠️ 注意：密码以明文存储，请注意文件安全**
 
-### 4. 运行程序
+### 5. 运行程序
 
 **Windows:** 双击 `start.bat` 或运行 `python jw.py`
-**macOS/Linux:** 运行 `python jw.py`
 
 ## 功能特点
 - 🔧 自动识别学号和密码输入框
@@ -111,10 +126,11 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ## 注意事项
 
 1. ⚠️ 首次使用前必须执行 `pip install -r requirements.txt`
-2. 🔐 配置文件密码为明文存储，请注意安全
-3. 🌐 确保能正常访问教务系统
-4. 🖥️ 建议使用Windows系统配合Edge浏览器
-5. ⏰ 验证码识别可能失败，需手动输入
+2. ⚠️ 首次运行前需要下载 `msedgedriver.exe` 并放入项目目录
+3. 🔐 配置文件密码为明文存储，请注意安全
+4. 🌐 确保能正常访问教务系统
+5. 🖥️ 仅支持 Windows 系统配合 Edge 浏览器
+6. ⏰ 验证码识别可能失败，需手动输入
 
 ## 故障排除
 
@@ -124,7 +140,8 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 | 'pip' 不是内部或外部命令 | 重装Python并勾选 "Add Python to PATH" |
 | 下载速度慢 | 使用镜像源：`pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple` |
 | ddddocr 安装失败 | `pip install setuptools wheel` 后再安装 ddddocr |
-| 浏览器无法启动 | 安装Microsoft Edge浏览器 |
+| 提示找不到 msedgedriver.exe | 下载驱动并放入项目根目录（见上文"获取浏览器驱动"） |
+| 浏览器无法启动 | 检查Edge浏览器是否安装，驱动版本是否匹配 |
 | 验证码识别失败 | 手动输入验证码 |
 | 登录失败 | 检查账号密码和验证码是否正确 |
 
@@ -136,7 +153,7 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 - `requirements.txt` - Python依赖包列表
 - `依赖包下载文本.txt` - 依赖包详细安装说明
 - `README.md` - 本文档
-- `msedgedriver.exe` - Edge浏览器驱动
+- `msedgedriver.exe` - Edge浏览器驱动（⚠️ 需要下载）
 
 ## 技术栈
 - Python 3.x
@@ -153,4 +170,3 @@ pip install requests>=2.28.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## 免责声明
 本脚本仅供学习交流使用，请遵守学校相关规定。因使用本脚本造成的任何问题，作者不承担责任。
-
